@@ -22,10 +22,10 @@ class RetrofitInstance {
             val okHttpClient = OkHttpClient.Builder().apply {
                 this.addInterceptor(interceptor)
             }
-            //                .connectTimeout(60, TimeUnit.SECONDS)
-            //                .writeTimeout(60, TimeUnit.SECONDS)
-            //                .readTimeout(60, TimeUnit.SECONDS)
-            .build()
+                .connectTimeout(60, TimeUnit.SECONDS)
+                .writeTimeout(60, TimeUnit.SECONDS)
+                .readTimeout(60, TimeUnit.SECONDS)
+                .build()
 
             return Retrofit.Builder()
                 .baseUrl(BASE_URL)
